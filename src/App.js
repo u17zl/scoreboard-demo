@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from "react";
+import ScoreBoard from "./components";
+import "./assets/App.css";
 
-function App() {
+const homeInfoData = { name: "Kensinton City", abbr: "KC", color: "red" };
+
+const awayInfoData = { name: "Green Gully", abbr: "GG", color: "#ddd" };
+
+const scoreData = { home: 4, away: 0 };
+
+const statData = { home: "Redcards 0" };
+
+const animationMain = [{ animation: "main", delay: 0 }];
+
+const animationStat = [
+  { animation: "main", delay: 0 },
+  { animation: "teamStat", delay: 0.6 }
+];
+
+const App = props => {
+  const [homeInfo, setHomeInfo] = useState(homeInfoData);
+  const [awayInfo, setAwayInfo] = useState(awayInfoData);
+  const [score, setScore] = useState(scoreData);
+  const [stat, setStat] = useState(statData);
+  const [animation, setAnimation] = useState([]);
+
+  const handleHide = () => {
+    setAnimation([]);
+  };
+
+  const handleShowMain = () => {
+    setAnimation(animationMain);
+  };
+
+  const handleShowStat = () => {
+    setAnimation(animationStat);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-content">
+      <ScoreBoard
+        home={homeInfo}
+        away={awayInfo}
+        score={score}
+        stat={stat}
+        animation={animation}
+      />
+      <div className="button-group">
+        <div className="my-button" onClick={handleHide}>
+          Hide
+        </div>
+        <div className="my-button" onClick={handleShowMain}>
+          Show Main
+        </div>
+        <div className="my-button" onClick={handleShowStat}>
+          Show Stat
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
