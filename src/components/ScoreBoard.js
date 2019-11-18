@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
 import { MainSection, TeamStat } from "./components";
 
 const ScoreBoard = props => {
@@ -47,15 +46,17 @@ const ScoreBoard = props => {
   }, [props]);
 
   return (
-    <Fragment>
-      {console.log(mainShow)}
-      {mainShow ? (
-        <MainSection home={home} away={away} score={score} />
-      ) : (
-        <div style={{ height: 21 }} />
-      )}
-      {statShow ? <TeamStat stat={stat} /> : null}
-    </Fragment>
+    <div className="board-grid">
+      <MainSection
+        show={mainShow}
+        statShow={statShow}
+        home={home}
+        away={away}
+        score={score}
+        statShow={statShow}
+      />
+      <TeamStat show={statShow} stat={stat} home={home} away={away} />
+    </div>
   );
 };
 
