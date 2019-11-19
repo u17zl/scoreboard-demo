@@ -11,7 +11,7 @@ export const Home = posed.div({
     opacity: 0,
     width: 30,
     delay: 300,
-    transition: { duration: 200 }
+    transition: { duration: 600 }
   }
 });
 
@@ -27,7 +27,7 @@ export const Score = posed.div({
     opacity: 0,
     delay: 300,
     ease: "e",
-    transition: { duration: 200 }
+    transition: { duration: 600 }
   }
 });
 export const Away = posed.div({
@@ -41,7 +41,7 @@ export const Away = posed.div({
     opacity: 0,
     width: 30,
     delay: 300,
-    transition: { duration: 200 }
+    transition: { duration: 600 }
   }
 });
 export const Time = posed.div({
@@ -54,7 +54,7 @@ export const Time = posed.div({
   exit: {
     opacity: 0,
     width: 30,
-    transition: { duration: 300 }
+    transition: { duration: 600 }
   }
 });
 
@@ -67,21 +67,20 @@ export const TimeText = posed.span({
   exit: {
     opacity: 0,
     width: 30,
-    transition: { duration: 300 }
+    transition: { duration: 600 }
   }
 });
 
 export const ScoreText = posed.div({
   enter: {
     opacity: 1,
-    delay: ({ delay }) => delay + 200,
-    transition: { duration: 300 },
+    delay: ({ delay }) => delay + 100,
+    transition: { duration: 500 },
     fontSize: 24
   },
   exit: {
     opacity: 0,
-
-    transition: { duration: 0 }
+    transition: { duration: 600 }
   }
 });
 
@@ -94,8 +93,7 @@ export const HomeText = posed.span({
   },
   exit: {
     opacity: 0,
-    backgroundColor: "transparent",
-    transition: { duration: 200 }
+    transition: { duration: 600 }
   }
 });
 
@@ -108,7 +106,7 @@ export const AwayText = posed.div({
   },
   exit: {
     opacity: 0,
-    transition: { duration: 200 }
+    transition: { duration: 600 }
   }
 });
 export const HomeBorder = posed.span({
@@ -121,7 +119,7 @@ export const HomeBorder = posed.span({
   },
   exit: {
     opacity: 0,
-    transition: { duration: 200 }
+    transition: { duration: 600 }
   }
 });
 
@@ -135,6 +133,6 @@ export const AwayBorder = posed.span({
   },
   exit: {
     opacity: 0,
-    transition: { duration: 200 }
+    transition: { duration: 600 }
   }
 });

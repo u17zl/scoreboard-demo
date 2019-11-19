@@ -5,22 +5,26 @@ const ScoreBoard = props => {
   const { home, away, score, stat, animation } = props;
   const [mainShow, setMainShow] = useState(false);
   const [statShow, setStatShow] = useState(false);
+  const [isBoth, setIsBoth] = useState(false);
   const [mainDelay, setMainDelay] = useState(0);
   const [statDelay, setStatDelay] = useState(0);
   //   input error handler
   useEffect(() => {
     switch (animation.length) {
       case 0:
-        setMainShow(false);
+        setIsBoth(true);
         setStatShow(false);
+        setMainShow(false);
         break;
 
       case 1:
         if (animation[0]["animation"] === "teamStat") {
           break;
         }
+        setIsBoth(false);
         setMainShow(true);
         setStatShow(false);
+
         setMainDelay(animation[0]["delay"]);
         break;
 
@@ -29,6 +33,7 @@ const ScoreBoard = props => {
           animation[0]["animation"] === "teamStat" &&
           animation[1]["animation"] === "main"
         ) {
+          setIsBoth(false);
           setMainShow(true);
           setStatShow(true);
           setMainDelay(animation[1]["delay"]);
@@ -38,6 +43,7 @@ const ScoreBoard = props => {
           animation[1]["animation"] === "teamStat" &&
           animation[0]["animation"] === "main"
         ) {
+          setIsBoth(false);
           setMainShow(true);
           setStatShow(true);
           setMainDelay(animation[0]["delay"]);
@@ -48,8 +54,7 @@ const ScoreBoard = props => {
       default:
         break;
     }
-  }, [props]);
-
+  }, [props, isBoth]);
   return (
     <div className="board-grid">
       <MainSection
@@ -59,14 +64,15 @@ const ScoreBoard = props => {
         away={away}
         score={score}
         statShow={statShow}
-        delay={mainDelay}
+        delay={mainDelay * 1000}
       />
       <TeamStat
         show={statShow}
         stat={stat}
         home={home}
         away={away}
-        delay={statDelay}
+        delay={mainDelay * 1000 + statDelay * 1000}
+        isBoth={isBoth}
       />
     </div>
   );

@@ -5,14 +5,14 @@ export const Team = posed.div({
   enter: {
     width: "100%",
     opacity: 1,
-    delay: ({ delay }) => delay + 400,
-    transition: { duration: 600 }
+    delay: ({ delay }) => delay + 500,
+    transition: { duration: 500 }
   },
   exit: {
     opacity: 0,
-    width: 40,
-    delay: 600,
-    transition: { duration: 400 }
+    width: 50,
+    delay: ({ isBoth }) => (isBoth ? 0 : 600),
+    transition: ({ isBoth }) => (isBoth ? { duration: 200 } : { duration: 400 })
   }
 });
 export const TeamText = posed.span({
@@ -23,8 +23,8 @@ export const TeamText = posed.span({
   },
   exit: {
     opacity: 0,
-    delay: 500,
-    transition: { duration: 400 }
+    delay: ({ isBoth }) => (isBoth ? 0 : 500),
+    transition: ({ isBoth }) => (isBoth ? { duration: 200 } : { duration: 400 })
   }
 });
 
@@ -38,7 +38,7 @@ export const Stat = posed.div({
   exit: {
     opacity: 0,
     width: 30,
-    delay: 200,
+    delay: ({ isBoth }) => (isBoth ? 0 : 200),
     transition: { duration: 300 }
   }
 });

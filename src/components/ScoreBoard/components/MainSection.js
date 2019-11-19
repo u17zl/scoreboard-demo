@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { PoseGroup } from "react-pose";
-import "../styles/mainSection.css";
+import "../styles/mainSection.scss";
 import * as mainAnim from "../animation/mainSectionAnim";
 
 const {
@@ -18,6 +18,7 @@ const {
 
 const MainSection = props => {
   const { show, statShow, home, away, score, delay } = props;
+
   const {
     color: homeColor,
     name: homeName,
