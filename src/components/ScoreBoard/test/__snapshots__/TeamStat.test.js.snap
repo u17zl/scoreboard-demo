@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stat Sector hide Stat Section Hide Snapshot 1`] = `
+<Fragment>
+  <PoseGroup
+    flipMove={true}
+  />
+</Fragment>
+`;
+
+exports[`Stat Sector show Stat Section Show Snapshot 1`] = `
+<Fragment>
+  <PoseGroup
+    flipMove={true}
+  >
+    <ForwardRef
+      className="team-stat"
+      delay={0}
+      isBoth={false}
+      key="stat"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <ForwardRef
+        delay={0}
+        isBoth={false}
+      />
+    </ForwardRef>
+    <ForwardRef
+      className="info-stat"
+      delay={0}
+      isBoth={false}
+      key="stat-info"
+      style={
+        Object {
+          "backgroundColor": "#001339",
+        }
+      }
+    >
+      <ForwardRef
+        delay={0}
+        isBoth={false}
+        key="stat-text"
+      />
+    </ForwardRef>
+  </PoseGroup>
+</Fragment>
+`;

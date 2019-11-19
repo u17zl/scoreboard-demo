@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Sector hide Main Section Hide Snapshot 1`] = `
+<Fragment>
+  <PoseGroup
+    flipMove={true}
+  />
+</Fragment>
+`;
+
+exports[`Main Sector show Main Section Show Snapshot 1`] = `
+<Fragment>
+  <PoseGroup
+    flipMove={true}
+  >
+    <ForwardRef
+      className="main-home"
+      delay={0}
+      key="home"
+      style={
+        Object {
+          "backgroundColor": "#d6211c",
+        }
+      }
+    >
+      <ForwardRef
+        delay={0}
+        key="texthome"
+      >
+        KC
+      </ForwardRef>
+      <ForwardRef
+        className="border-home"
+        color="#de4d49"
+        delay={0}
+        key="borderhome"
+      />
+    </ForwardRef>
+    <ForwardRef
+      className="main-score"
+      delay={0}
+      key="score"
+      style={
+        Object {
+          "backgroundColor": "#001339",
+        }
+      }
+    >
+      <ForwardRef
+        delay={0}
+        key="textscore"
+      >
+        4-0
+      </ForwardRef>
+    </ForwardRef>
+    <ForwardRef
+      className="main-away"
+      delay={0}
+      key="away"
+      style={
+        Object {
+          "backgroundColor": "#eee",
+        }
+      }
+    >
+      <ForwardRef
+        className="border-away"
+        color="#ccc"
+        delay={0}
+        key="borderaway"
+      />
+      <ForwardRef
+        delay={0}
+        key="textaway"
+      >
+        GG
+      </ForwardRef>
+    </ForwardRef>
+    <ForwardRef
+      className="main-time"
+      delay={0}
+      key="time"
+      style={
+        Object {
+          "backgroundColor": "#001339",
+        }
+      }
+    >
+      <ForwardRef
+        key="time-text"
+      >
+        90:00
+      </ForwardRef>
+    </ForwardRef>
+  </PoseGroup>
+</Fragment>
+`;
+
+exports[`Main Sector show then hide Main Section Show To Hide Snapshot 1`] = `
+<Fragment>
+  <PoseGroup
+    flipMove={true}
+  >
+    <ForwardRef
+      className="main-home"
+      delay={0}
+      key="home"
+      style={
+        Object {
+          "backgroundColor": "#d6211c",
+        }
+      }
+    >
+      <ForwardRef
+        delay={0}
+        key="texthome"
+      >
+        KC
+      </ForwardRef>
+      <ForwardRef
+        className="border-home"
+        color="#de4d49"
+        delay={0}
+        key="borderhome"
+      />
+    </ForwardRef>
+    <ForwardRef
+      className="main-score"
+      delay={0}
+      key="score"
+      style={
+        Object {
+          "backgroundColor": "#001339",
+        }
+      }
+    >
+      <ForwardRef
+        delay={0}
+        key="textscore"
+      >
+        4-0
+      </ForwardRef>
+    </ForwardRef>
+    <ForwardRef
+      className="main-away"
+      delay={0}
+      key="away"
+      style={
+        Object {
+          "backgroundColor": "#eee",
+        }
+      }
+    >
+      <ForwardRef
+        className="border-away"
+        color="#ccc"
+        delay={0}
+        key="borderaway"
+      />
+      <ForwardRef
+        delay={0}
+        key="textaway"
+      >
+        GG
+      </ForwardRef>
+    </ForwardRef>
+  </PoseGroup>
+</Fragment>
+`;

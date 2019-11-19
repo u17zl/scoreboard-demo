@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Empty Props Empty Section Snapshot 1`] = `
+<Fragment>
+  <div
+    className="board-grid"
+  >
+    <MainSection
+      away={
+        Object {
+          "abbr": "GG",
+          "borderColor": "#ccc",
+          "color": "#eee",
+          "name": "Green Gully",
+        }
+      }
+      delay={0}
+      home={
+        Object {
+          "abbr": "KC",
+          "borderColor": "#de4d49",
+          "color": "#d6211c",
+          "name": "Kingston City",
+        }
+      }
+      score={
+        Object {
+          "away": 0,
+          "home": 4,
+        }
+      }
+      show={false}
+      statShow={false}
+    />
+    <TeamStat
+      away={
+        Object {
+          "abbr": "GG",
+          "borderColor": "#ccc",
+          "color": "#eee",
+          "name": "Green Gully",
+        }
+      }
+      delay={0}
+      home={
+        Object {
+          "abbr": "KC",
+          "borderColor": "#de4d49",
+          "color": "#d6211c",
+          "name": "Kingston City",
+        }
+      }
+      isBoth={false}
+      show={false}
+      stat={
+        Object {
+          "home": "Red Cards 0",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Main Sector Props Main Section Snapshot 1`] = `
+<Fragment>
+  <div
+    className="board-grid"
+  >
+    <MainSection
+      away={
+        Object {
+          "abbr": "GG",
+          "borderColor": "#ccc",
+          "color": "#eee",
+          "name": "Green Gully",
+        }
+      }
+      delay={0}
+      home={
+        Object {
+          "abbr": "KC",
+          "borderColor": "#de4d49",
+          "color": "#d6211c",
+          "name": "Kingston City",
+        }
+      }
+      score={
+        Object {
+          "away": 0,
+          "home": 4,
+        }
+      }
+      show={false}
+      statShow={false}
+    />
+    <TeamStat
+      away={
+        Object {
+          "abbr": "GG",
+          "borderColor": "#ccc",
+          "color": "#eee",
+          "name": "Green Gully",
+        }
+      }
+      delay={0}
+      home={
+        Object {
+          "abbr": "KC",
+          "borderColor": "#de4d49",
+          "color": "#d6211c",
+          "name": "Kingston City",
+        }
+      }
+      isBoth={false}
+      show={false}
+      stat={
+        Object {
+          "home": "Red Cards 0",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Stat Sector Props Stat Section Snapshot 1`] = `
+<Fragment>
+  <div
+    className="board-grid"
+  >
+    <MainSection
+      away={
+        Object {
+          "abbr": "GG",
+          "borderColor": "#ccc",
+          "color": "#eee",
+          "name": "Green Gully",
+        }
+      }
+      delay={0}
+      home={
+        Object {
+          "abbr": "KC",
+          "borderColor": "#de4d49",
+          "color": "#d6211c",
+          "name": "Kingston City",
+        }
+      }
+      score={
+        Object {
+          "away": 0,
+          "home": 4,
+        }
+      }
+      show={false}
+      statShow={false}
+    />
+    <TeamStat
+      away={
+        Object {
+          "abbr": "GG",
+          "borderColor": "#ccc",
+          "color": "#eee",
+          "name": "Green Gully",
+        }
+      }
+      delay={0}
+      home={
+        Object {
+          "abbr": "KC",
+          "borderColor": "#de4d49",
+          "color": "#d6211c",
+          "name": "Kingston City",
+        }
+      }
+      isBoth={false}
+      show={false}
+      stat={
+        Object {
+          "home": "Red Cards 0",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;

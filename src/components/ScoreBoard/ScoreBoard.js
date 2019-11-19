@@ -56,25 +56,27 @@ const ScoreBoard = props => {
     }
   }, [props, isBoth]);
   return (
-    <div className="board-grid">
-      <MainSection
-        show={mainShow}
-        statShow={statShow}
-        home={home}
-        away={away}
-        score={score}
-        statShow={statShow}
-        delay={mainDelay * 1000}
-      />
-      <TeamStat
-        show={statShow}
-        stat={stat}
-        home={home}
-        away={away}
-        delay={mainDelay * 1000 + statDelay * 1000}
-        isBoth={isBoth}
-      />
-    </div>
+    <Fragment>
+      <div className="board-grid">
+        <MainSection
+          show={mainShow}
+          statShow={statShow}
+          home={home}
+          away={away}
+          score={score}
+          statShow={statShow}
+          delay={mainDelay * 1000}
+        />
+        <TeamStat
+          show={statShow}
+          stat={stat}
+          home={home}
+          away={away}
+          delay={mainDelay * 1000 + statDelay * 1000}
+          isBoth={isBoth}
+        />
+      </div>
+    </Fragment>
   );
 };
 
