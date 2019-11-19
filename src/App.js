@@ -42,17 +42,13 @@ const App = props => {
 
   const handleHide = () => {
     setAnimation([]);
-    console.log(form);
-    // console.log(stat);
   };
 
   const handleShowMain = () => {
-    console.log(form);
     setAnimation([form[0]]);
   };
 
   const handleShowStat = () => {
-    console.log(form);
     setAnimation(form);
   };
 
