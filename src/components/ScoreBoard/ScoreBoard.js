@@ -74,7 +74,7 @@ const ScoreBoard = props => {
           stat={stat}
           home={home}
           away={away}
-          delay={mainDelay * 1000 + statDelay * 1000}
+          delay={statDelay * 1000 + mainDelay * 1000}
           isBoth={isBoth}
         />
       </div>

@@ -10,7 +10,7 @@ export const Home = posed.div({
   exit: {
     opacity: 0,
     width: 30,
-    delay: 300,
+    delay: 500,
     transition: { duration: 600 }
   }
 });
@@ -25,7 +25,7 @@ export const Score = posed.div({
   exit: {
     width: 30,
     opacity: 0,
-    delay: 300,
+    delay: 500,
     ease: "e",
     transition: { duration: 600 }
   }
@@ -40,7 +40,7 @@ export const Away = posed.div({
   exit: {
     opacity: 0,
     width: 30,
-    delay: 300,
+    delay: 500,
     transition: { duration: 600 }
   }
 });

@@ -5,7 +5,7 @@ export const Team = posed.div({
   enter: {
     width: "100%",
     opacity: 1,
-    delay: ({ delay }) => delay + 500,
+    delay: ({ delay }) => delay + 700,
     transition: { duration: 500 }
   },
   exit: {
@@ -18,7 +18,7 @@ export const Team = posed.div({
 export const TeamText = posed.span({
   enter: {
     opacity: 1,
-    delay: ({ delay }) => delay + 600,
+    delay: ({ delay }) => delay + 800,
     transition: { duration: 400 }
   },
   exit: {
@@ -32,7 +32,7 @@ export const Stat = posed.div({
   enter: {
     width: "100%",
     opacity: 1,
-    delay: ({ delay }) => delay + 1000,
+    delay: ({ delay }) => delay + 1200,
     transition: { duration: 500 }
   },
   exit: {
@@ -45,7 +45,7 @@ export const Stat = posed.div({
 export const StatText = posed.span({
   enter: {
     opacity: 1,
-    delay: ({ delay }) => delay + 1200,
+    delay: ({ delay }) => delay + 1400,
     transition: { duration: 300 }
   },
   exit: {
