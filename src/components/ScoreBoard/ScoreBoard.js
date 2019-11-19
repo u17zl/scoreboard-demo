@@ -8,6 +8,7 @@ const ScoreBoard = props => {
   const [isBoth, setIsBoth] = useState(false);
   const [mainDelay, setMainDelay] = useState(0);
   const [statDelay, setStatDelay] = useState(0);
+
   //   input error handler
   useEffect(() => {
     switch (animation.length) {
@@ -55,6 +56,7 @@ const ScoreBoard = props => {
         break;
     }
   }, [props, isBoth]);
+
   return (
     <Fragment>
       <div className="board-grid">

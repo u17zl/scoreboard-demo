@@ -81,7 +81,6 @@ const MainSection = props => {
             </AwayText>
           </Away>
         ]}
-
         {show && !statShow && (
           <Time
             key="time"

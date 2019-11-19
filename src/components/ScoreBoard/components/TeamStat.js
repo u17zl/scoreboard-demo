@@ -9,6 +9,7 @@ const TeamStat = props => {
   const [statData, setSataData] = useState({ name: "", stat: "", color: "" });
   const { color: homeColor, name: homeName, abbr: homeAbbr } = home;
   const { color: awayColor, name: awayName, abbr: awayAbbr } = away;
+
   useEffect(() => {
     if (Object.keys(stat)[0] === "home") {
       setSataData({ name: homeName, stat: stat["home"], color: homeColor });

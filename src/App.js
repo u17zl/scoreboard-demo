@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { ScoreBoard } from "./components/ScoreBoard";
 import "./assets/styles/App.scss";
 import backgroundPic from "./assets/images/bg.png";
+
 const homeInfoData = {
   name: "Kingston City",
   abbr: "KC",
@@ -38,8 +39,6 @@ const App = props => {
     { animation: "main", delay: "0" },
     { animation: "teamStat", delay: "0" }
   ]);
-
-  useEffect(() => {}, [animation]);
 
   const handleHide = () => {
     setAnimation([]);
