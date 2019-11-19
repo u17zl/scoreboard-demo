@@ -1,32 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react";
-import "./teamStat.css";
+import "../styles/teamStat.css";
 import posed, { PoseGroup } from "react-pose";
+import * as statAnim from "../animation/statSectionAnim";
 
-const Team = posed.div({
-  enter: { width: "100%", opacity: 1, delay: 0, transition: { duration: 700 } },
-  exit: {
-    opacity: 0,
-    width: 40,
-    delay: 300,
-    transition: { duration: 300 }
-  }
-});
-const Stat = posed.div({
-  enter: {
-    width: "100%",
-    opacity: 1,
-    delay: 500,
-    transition: { duration: 700 }
-  },
-  exit: {
-    opacity: 0,
-    width: 30,
-    transition: { duration: 200 }
-  }
-});
-
+const { Team, TeamText, Stat, StatText } = statAnim;
 const TeamStat = props => {
-  const { show, home, away, stat } = props;
+  const { show, home, away, stat, delay } = props;
   const [statData, setSataData] = useState({ name: "", stat: "", color: "" });
   const { color: homeColor, name: homeName, abbr: homeAbbr } = home;
   const { color: awayColor, name: awayName, abbr: awayAbbr } = away;
@@ -45,16 +24,20 @@ const TeamStat = props => {
           <Team
             key="stat"
             className="team-stat"
-            style={{ backgroundColor: `${statData.color}` }}
+            style={{ backgroundColor: statData.color }}
+            delay={delay}
           >
-            Kensington City
+            <TeamText delay={delay}>{statData.name}</TeamText>
           </Team>,
           <Stat
             key="stat-info"
             className="info-stat"
             style={{ backgroundColor: "#001339" }}
+            delay={delay}
           >
-            {statData.stat}
+            <StatText key="stat-text" delay={delay}>
+              {statData.stat}
+            </StatText>
           </Stat>
         ]}
       </PoseGroup>

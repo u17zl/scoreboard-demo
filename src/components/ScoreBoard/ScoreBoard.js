@@ -5,7 +5,8 @@ const ScoreBoard = props => {
   const { home, away, score, stat, animation } = props;
   const [mainShow, setMainShow] = useState(false);
   const [statShow, setStatShow] = useState(false);
-
+  const [mainDelay, setMainDelay] = useState(0);
+  const [statDelay, setStatDelay] = useState(0);
   //   input error handler
   useEffect(() => {
     switch (animation.length) {
@@ -18,9 +19,9 @@ const ScoreBoard = props => {
         if (animation[0]["animation"] === "teamStat") {
           break;
         }
-        console.log("hello");
         setMainShow(true);
         setStatShow(false);
+        setMainDelay(animation[0]["delay"]);
         break;
 
       case 2:
@@ -30,6 +31,8 @@ const ScoreBoard = props => {
         ) {
           setMainShow(true);
           setStatShow(true);
+          setMainDelay(animation[1]["delay"]);
+          setStatDelay(animation[0]["delay"]);
           break;
         } else if (
           animation[1]["animation"] === "teamStat" &&
@@ -37,6 +40,8 @@ const ScoreBoard = props => {
         ) {
           setMainShow(true);
           setStatShow(true);
+          setMainDelay(animation[0]["delay"]);
+          setStatDelay(animation[1]["delay"]);
           break;
         }
 
@@ -54,8 +59,15 @@ const ScoreBoard = props => {
         away={away}
         score={score}
         statShow={statShow}
+        delay={mainDelay}
       />
-      <TeamStat show={statShow} stat={stat} home={home} away={away} />
+      <TeamStat
+        show={statShow}
+        stat={stat}
+        home={home}
+        away={away}
+        delay={statDelay}
+      />
     </div>
   );
 };

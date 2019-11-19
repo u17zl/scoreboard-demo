@@ -22,13 +22,13 @@
 }
 
 .main-content {
-  width: 900px;
-  height: 600px;
+  width: 50vw;
+  height: 50vh;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -450px;
-  margin-top: -300px;
+  margin-left: -25vw;
+  margin-top: -25vh;
 }
 .score-board {
   margin: 20px auto 20px 20px;
@@ -58,8 +58,59 @@
   justify-content: center;
   align-items: center;
 }
+
 .board-grid {
   width: 900px;
   display: grid;
-  grid-template-columns: 8.33% 8.33% 8.33% 33.33% 16.67% 8.33% 8.33% 8.33% 8.33% 8.33%;
+  grid-template-columns: 12% 12% 12% 33.33% 16.67% 14%;
+}
+
+input {
+  outline-style: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px 7px;
+  margin: 10px;
+}
+
+/* customized raido */
+.radio {
+  margin: 1rem;
+}
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+.radio input[type="radio"] + .radio-label:before {
+  content: "";
+  background: #f4f4f4;
+  border-radius: 100%;
+  border: 1px solid #b4b4b4;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  vertical-align: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.radio input[type="radio"]:checked + .radio-label:before {
+  background-color: #d44b52;
+  box-shadow: inset 0 0 0 4px #f4f4f4;
+}
+
+.radio input[type="radio"]:focus + .radio-label:before {
+  outline: none;
+  border-color: #d44b52;
+}
+
+.radio input[type="radio"]:disabled + .radio-label:before {
+  box-shadow: inset 0 0 0 4px #f4f4f4;
+  border-color: #b4b4b4;
+  background: #b4b4b4;
+}
+.radio input[type="radio"] + .radio-label:empty:before {
+  margin-right: 0;
 }
