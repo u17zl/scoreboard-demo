@@ -1,6 +1,7 @@
 # Score Board
 
-This is a test of recreating a score board during the football game live
+This is a test of recreating a score board during the football game live  
+[Live Demo (https://u17zl.github.io/scoreboard-demo)](https://u17zl.github.io/scoreboard-demo)
 
 ## How to run
 
